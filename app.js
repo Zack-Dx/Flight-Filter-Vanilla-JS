@@ -8,6 +8,7 @@ const status_filter = document.querySelector("#status-filter");
 const airline_filter = document.querySelector("#airline-filter");
 const departure_filter = document.querySelector("#departure-filter");
 const destination_filter = document.querySelector("#destination-filter");
+const flightNumber_filter = document.querySelector("#flightNum-filter");
 
 // Event Listeners
 status_filter.addEventListener("change", () => {
@@ -17,6 +18,7 @@ status_filter.addEventListener("change", () => {
       airline: airline_filter.value,
       departure: departure_filter.value,
       destination: destination_filter.value,
+      flightNum: flightNumber_filter.value,
     },
     data
   );
@@ -28,6 +30,7 @@ airline_filter.addEventListener("change", () => {
       airline: airline_filter.value,
       departure: departure_filter.value,
       destination: destination_filter.value,
+      flightNum: flightNumber_filter.value,
     },
     data
   );
@@ -39,6 +42,7 @@ departure_filter.addEventListener("input", () => {
       airline: airline_filter.value,
       departure: departure_filter.value,
       destination: destination_filter.value,
+      flightNum: flightNumber_filter.value,
     },
     data
   );
@@ -50,6 +54,19 @@ destination_filter.addEventListener("input", () => {
       airline: airline_filter.value,
       departure: departure_filter.value,
       destination: destination_filter.value,
+      flightNum: flightNumber_filter.value,
+    },
+    data
+  );
+});
+flightNumber_filter.addEventListener("input", () => {
+  filterFlight(
+    {
+      status: status_filter.value,
+      airline: airline_filter.value,
+      departure: departure_filter.value,
+      destination: destination_filter.value,
+      flightNum: flightNumber_filter.value,
     },
     data
   );
