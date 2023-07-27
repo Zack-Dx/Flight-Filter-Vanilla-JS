@@ -8,6 +8,8 @@ export const filterFlight = (filterObj, data) => {
     const flightAirline = flight.airline.toLowerCase().trim();
     const flightDeparture = flight.departure.toLowerCase().trim();
     const flightDestination = flight.destination.toLowerCase().trim();
+
+    // Conditionals
     const statusFilterMatch =
       status === "all" || flightStatus === status.toLowerCase().trim();
     const airlineFilterMatch =
@@ -19,7 +21,7 @@ export const filterFlight = (filterObj, data) => {
       destination === "" ||
       flightDestination.includes(destination.toLowerCase().trim());
 
-    // Returning the array for which all the conditions below are true.
+    // Returning the array for which all the conditions above are true.
     return (
       statusFilterMatch &&
       airlineFilterMatch &&
