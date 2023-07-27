@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flight API</title>
+    <link rel="stylesheet" href="app.css" />
+    <script type="module" src="app.js"></script>
+  </head>
+
+  <body>
+    <div style="text-align: center; color: cornflowerblue">
+      <h3>Flight Tracker</h3>
+    </div>
+
+    <div class="filter">
+      <label for="status-filter">Filter by status:</label>
+      <select id="status-filter">
+        <option value="all">All</option>
+        <option value="on time">On Time</option>
+        <option value="delayed">Delayed</option>
+      </select>
+
+      <label for="airline-filter">Filter by airline:</label>
+      <select id="airline-filter">
+        <option value="all">All Airlines</option>
+        <option value="Emirates">Emirates</option>
+        <option value="Qatar">Qatar</option>
+        <option value="SpiceJet">Spice Jet</option>
+      </select>
+
+      <label for="departure-filter">Filter by departure city:</label>
+      <input type="text" id="departure-filter" value="" />
+
+      <label for="destination-filter">Filter by destination city:</label>
+      <input type="text" id="destination-filter" value="" />
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Flight Number</th>
+          <th>Airline</th>
+          <th>Departure</th>
+          <th>Destination</th>
+          <th>Departure Time</th>
+          <th>Arrival Time</th>
+          <th>Duration</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <div>
+        <p id="error_message">Heo</p>
+      </div>
+      <tbody class="flight_row"></tbody>
+    </table>
+  </body>
+</html>
